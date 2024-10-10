@@ -1,6 +1,6 @@
 def simple_reverse(string = None):
     if not(isinstance(string, str)):
-        return 'Invalid Input'
+       return 'Must provide input string'
     elif len(string) < 2:
         return string
     else:
