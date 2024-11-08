@@ -1,6 +1,7 @@
-from TwoSum import *
+from RotateArray import *
 
-inList = [1, 2, 7, 12, 4]
-target = 6
+inList = [1, 2, 3, 4, 5, 6]
+pivot = 3
 
-print(two_sum_fast(inList, target))
+rotate3(inList, pivot)
+print(inList)

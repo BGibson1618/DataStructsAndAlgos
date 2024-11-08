@@ -11,10 +11,24 @@ def rotate(nums: list[int], k: int) -> None:
         nums[m] = temp_list[m]
     return None
 
-#Using Reverse Method
+#Rotate in Place
+def rotate2(nums: list[int], k: int) -> None:
+    for _ in range(k):
+        num = nums.pop()
+        nums.insert(0, num)
+    return None
 
+#Rotate Using Reverse
+def rotate3(nums: list[int], k: int) -> None:
+    n = len(nums)
+    k %= n
 
-inlist = [1,2,3,4,5,6,7]
-x = 3
-rotate(inlist, x)
-print(inlist)
+    def reverse(start, end):
+        while start < end:
+            nums[start], nums[end] = nums[end], nums[start]
+            start += 1
+            end -= 1
+
+    nums.reverse()
+    reverse(0, k -1)
+    reverse(k, n -1 )
