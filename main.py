@@ -1,7 +1,4 @@
-from RotateArray import *
+from LongestWord import *
 
-inList = [1, 2, 3, 4, 5, 6]
-pivot = 3
-
-rotate3(inList, pivot)
-print(inList)
+s = "Hi my name is Brent Gibson cool@$%^^^&$%"
+print(longest_word(s))
